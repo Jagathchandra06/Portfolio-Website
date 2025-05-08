@@ -4,45 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jagath Chandra Mallam | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
-    
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #121212;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
       color: #f0f0f0;
       scroll-behavior: smooth;
     }
-    header, section, footer {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-      animation: fadeIn 1s ease-in;
-    }
-    h1, h2 {
-      color: #00bcd4;
-    }
     nav {
-      background-color: #1e1e1e;
-      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      justify-content: center;
     }
     nav a {
-      color: #f0f0f0;
-      margin: 0 15px;
+      color: #ffffff;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      color: #00e5ff;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h2 {
+      color: #00e5ff;
+      text-align: center;
+      margin-bottom: 40px;
     }
     .project {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.02);
     }
     .project img {
       width: 100px;
@@ -54,12 +83,20 @@
     .project div {
       flex: 1;
     }
+    ul li {
+      margin-bottom: 12px;
+    }
     .contact a {
-      color: #00bcd4;
+      color: #00e5ff;
       text-decoration: none;
     }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>

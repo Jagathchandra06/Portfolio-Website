@@ -1,250 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jagath Chandra Mallam | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* --- Base Styles --- */
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d1117;
-      color: #e6edf3;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      background: #0c1e3d; /* deep navy */
+      color: #f5f5f5; /* off-white */
       scroll-behavior: smooth;
     }
-
-    h1, h2 {
-      color: #58a6ff;
-    }
-
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #1f6feb;
-    }
-
-    /* --- Navbar --- */
     nav {
-      position: fixed;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      position: sticky;
       top: 0;
-      left: 0;
-      width: 100%;
-      background: #161b22;
+      z-index: 1000;
       display: flex;
       justify-content: center;
-      padding: 0.8rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.7);
-      z-index: 1000;
+      flex-wrap: wrap;
     }
-
     nav a {
-      margin: 0 15px;
-      font-weight: bold;
+      color: #1de9b6; /* turquoise */
+      margin: 10px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-
     nav a:hover {
-      border-bottom: 2px solid #58a6ff;
+      color: #00f2d4; /* brighter turquoise on hover */
     }
-
-    /* --- Sections --- */
-    .section {
-      padding: 80px 20px;
-      max-width: 900px;
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #0c1e3d, #152d52);
+      color: white;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #1de9b6;
+      box-shadow: 0px 4px 20px rgba(29, 233, 182, 0.6);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
-      animation: fadeIn 1s ease forwards;
     }
-
+    h2 {
+      color: #1de9b6; /* turquoise headings */
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 20px rgba(29, 233, 182, 0.5); /* turquoise shadow */
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+    .card h4 {
+      margin: 6px 0 12px;
+      font-size: 1rem;
+      color: #1de9b6;
+      font-weight: 500;
+    }
+    .card p, .card li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #dcdcdc;
+    }
+    ul { padding-left: 20px; }
+    a { color: #1de9b6; text-decoration: none; }
+    a:hover { color: #00f2d4; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      margin-top: 40px;
+    }
+    footer p { color: #bbb; }
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    /* --- Buttons --- */
-    .btn {
-      display: inline-block;
-      background: #58a6ff;
-      color: #0d1117;
-      padding: 10px 20px;
-      margin-top: 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #1f6feb;
-      transform: scale(1.05);
-    }
-
-    /* --- Experience Cards --- */
-    .experience-card {
-      background: #161b22;
-      border-left: 4px solid #58a6ff;
-      padding: 15px 20px;
-      margin: 15px 0;
-      border-radius: 6px;
-      transition: transform 0.3s ease;
-    }
-
-    .experience-card:hover {
-      transform: translateX(5px);
-    }
-
-    .experience-title {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #58a6ff;
-    }
-
-    .experience-org {
-      font-style: italic;
-      margin-bottom: 5px;
-    }
-
-    ul {
-      margin: 10px 0 0 20px;
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-
-  <!-- Navbar -->
   <nav>
-    <a href="#home">Home</a>
-    <a href="#education">Education</a>
+    <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#certifications">Certifications</a>
-    <a href="#activities">Activities</a>
-    <a href="#awards">Awards</a>
     <a href="#youtube">YouTube</a>
+    <a href="#publications">Publications</a>
+    <a href="#activities">Activities</a>
+    <a href="#tours">Tours</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Home / Summary -->
-  <section id="home" class="section">
+  <header id="about">
+    <img src="./profile.jpg" alt="Jagath Chandra Mallam">
     <h1>Jagath Chandra Mallam</h1>
-    <p>
-      Recent MSEE graduate with hands-on experience in analog/digital circuit design, power systems, 
-      and embedded systems. Proficient in AutoCAD, KiCad, and system troubleshooting. Known for a proactive 
-      approach to problem-solving, strong documentation skills, and the ability to quickly adapt to real-world 
-      engineering challenges. Combining academic rigor with practical lab and field experience to support 
-      innovative, reliable, and cost-effective engineering solutions.
-    </p>
-    <p>
-      📞 +1 (901) 663-6808 | ✉️ jagathchandramallam@gmail.com |
-      <a href="https://www.linkedin.com/in/jagath-chandra-mallam-9087a2187/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/Jagathchandra06" target="_blank">GitHub</a>
-    </p>
-  </section>
+    <p>Master of Science in Electrical and Computer Engineering at the University of Memphis | Open to Full-Time Roles (OPT)</p>
+    <p>Specialized in Electrical Systems, Embedded Engineering, and AI applications. Experienced in PCB assembly, circuit troubleshooting, and automation projects, with additional expertise in software development and machine learning. Actively seeking opportunities to contribute innovative and scalable solutions in the electrical or IT field.</p>
+  </header>
 
-  <!-- Education -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <p><strong>The University of Memphis</strong> — M.S. Electrical & Computer Engineering, GPA: 3.41/4 <br> Jan 2023 – Dec 2024, Memphis, TN</p>
-    <p><strong>Malla Reddy Engineering College and Management Sciences</strong> — B.Tech in Electronics & Communications Engineering <br> Jul 2019 – Jun 2022, Telangana, India</p>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="section">
+  <section id="experience">
     <h2>Work Experience</h2>
-
-    <div class="experience-card">
-      <div class="experience-title">Hardware Engineer Intern</div>
-      <div class="experience-org">Biomedical Sensors & Systems Lab, University of Memphis | Jun 2025 – Present</div>
-      <ul>
-        <li>Designed and developed analog/digital circuits for biomedical sensors.</li>
-        <li>Created/edit PCB schematics; collaborated with fabrication teams.</li>
-        <li>Supported hardware-firmware co-design and system integration.</li>
-        <li>Tested, debugged, and validated hardware prototypes.</li>
-        <li>Collaborated with researchers on proof-of-concept projects.</li>
-      </ul>
+    <div class="card">
+      <h3>Hardware Engineer Intern</h3>
+      <h4>SP Technologies | Nov 2018 – May 2019</h4>
+      <p>Worked on embedded systems and firmware development. Developed prototypes using 8051 microcontrollers, circuit schematics, and embedded C programming. Successfully built sensor-integrated automation systems and received certification for project excellence.</p>
     </div>
-
-    <div class="experience-card">
-      <div class="experience-title">Student Assistant</div>
-      <div class="experience-org">University of Memphis Lock Shop | Jun 2023 – Dec 2024</div>
-      <ul>
-        <li>Automated tracking systems, improving accuracy by 30%.</li>
-        <li>Optimized lock core processes, improving precision by 15%.</li>
-        <li>Collaborated with locksmiths to complete 200+ maintenance tasks.</li>
-        <li>Streamlined workflows and introduced corrective action plans.</li>
-      </ul>
+    <div class="card">
+      <h3>Student Assistant – Lock Shop</h3>
+      <h4>University of Memphis | Jun 2023 – Dec 2024</h4>
+      <p>Assisted locksmiths with core pinning, key cutting, and mechanical/electrical troubleshooting for campus facilities. Managed inventory workflows, maintained accurate key assignment records, and improved documentation processes for efficiency.</p>
+    </div>
+    <div class="card">
+      <h3>Embedded Systems Intern</h3>
+      <h4>Academic Projects & Training | 2016 – 2022</h4>
+      <p>Hands-on experience in PCB assembly, VLSI projects (Low Power SRAM, Hybrid Adder/Subtractor), and embedded automation (RF-based robot, automatic light control). Developed practical skills in soldering, debugging, and high-voltage testing concepts through industrial tours and project work.</p>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>The University of Memphis</h3>
+      <h4>M.S. in Electrical and Computer Engineering | 2023–2024 | GPA: 3.41/4.0</h4>
+    </div>
+    <div class="card">
+      <h3>Malla Reddy Engineering College & Management Sciences</h3>
+      <h4>B.Tech in Electronics and Communication Engineering | 2019–2022</h4>
+    </div>
+    <div class="card">
+      <h3>Government Polytechnic Sangareddy</h3>
+      <h4>Diploma in Electronics and Communication Engineering | 2016–2019 | 85%</h4>
+    </div>
+  </section>
+
+  <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li>Leaf Image Classification using Logistic Regression & Random Forest (73% accuracy, Python).</li>
-      <li>Low Power SRAM Design using 120nm technology (Microwind, DSCH2).</li>
-      <li>High Speed Hybrid Adder/Subtractor with Reversible Logic.</li>
-      <li>Automatic Light Intensity Control (Embedded Systems with C).</li>
-      <li>RF-Based Remote Controlled Metal Fire Gas Detection Robot.</li>
-    </ul>
+    <div class="card">
+      <h3>Leaf Image Classification</h3>
+      <p>Developed ML models including Logistic Regression and Random Forest for plant leaf classification, achieving 73% accuracy using Python and the PlantVillage Dataset. (Apr 2023)</p>
+    </div>
+    <div class="card">
+      <h3>Low Power SRAM Design Using 120nm Technology</h3>
+      <p>Designed a 6T SRAM cell optimized with MTCMOS for power efficiency using Microwind and DSCH2. (Jul 2022)</p>
+    </div>
+    <div class="card">
+      <h3>High Speed Hybrid Adder/Subtractor Using Reversible Logic</h3>
+      <p>Simulated hybrid adder/subtractor circuits optimizing for speed, area, and power efficiency. (Jan 2022)</p>
+    </div>
+    <div class="card">
+      <h3>Automatic Light Intensity Control</h3>
+      <p>Engineered a light automation system for streetlights using sensors and embedded C programming. (Sep 2019)</p>
+    </div>
+    <div class="card">
+      <h3>RF-Based Remote Controlled Metal Fire Gas Detection Robot</h3>
+      <p>Developed a microcontroller-based robot for hazardous environment detection. (Nov 2018)</p>
+    </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
+  <section id="skills">
     <h2>Skills</h2>
-    <p>
-      <strong>Programming:</strong> C, Python, Core Java, SQL <br>
-      <strong>Design Tools:</strong> AutoCAD, MATLAB, Microwind, ExpressPCB, DSCH2 <br>
-      <strong>AI/ML:</strong> TensorFlow, PyTorch, scikit-learn, OpenCV <br>
-      <strong>Electrical:</strong> Analog/Digital Design, Power Systems, Embedded Systems, PCB Layout <br>
-      <strong>Testing:</strong> Oscilloscopes, Multimeters, Soldering, Troubleshooting <br>
-      <strong>Data Analysis:</strong> NumPy, Pandas, Matplotlib, Seaborn <br>
-      <strong>Software:</strong> MS Office, GitHub
-    </p>
+    <div class="card">
+      <ul>
+        <li><strong>Programming:</strong> Python, Java, C, SQL</li>
+        <li><strong>AI/ML Tools:</strong> TensorFlow, PyTorch, scikit-learn, OpenCV</li>
+        <li><strong>Design & Simulation:</strong> MATLAB, AutoCAD, Microwind, ExpressPCB, DSCH2</li>
+        <li><strong>Data Analysis:</strong> NumPy, Pandas, Matplotlib</li>
+        <li><strong>Technical:</strong> Embedded Systems, PCB Layout, Signal Processing, Microcontrollers</li>
+        <li><strong>Software:</strong> Microsoft Office Suite, GitHub</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section">
+  <section id="certifications">
     <h2>Certifications</h2>
-    <ul>
-      <li>AutoCAD Essential Training – LinkedIn Learning (Jan 2025)</li>
-      <li>Data Engineering Foundations – LinkedIn Learning (Jan 2025)</li>
-      <li>Excel for Engineering Professionals – LinkedIn Learning (Dec 2024)</li>
-      <li>Embedded Systems & Firmware Training – SP Technologies (May 2019)</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li>AutoCAD Essential Training – LinkedIn Learning (Jan 2025)</li>
+        <li>Data Engineering Foundations – LinkedIn Learning (Jan 2025)</li>
+        <li>Excel for Engineering Professionals – LinkedIn Learning (Dec 2024)</li>
+        <li>Embedded Systems & Firmware Internship Certificate – SP Technologies (2019)</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Activities -->
-  <section id="activities" class="section">
+  <section id="youtube">
+    <h2>YouTube / Content Creation</h2>
+    <div class="card">
+      <p>I share videos about university life, travel, and engineering knowledge for aspiring international students, including dorm tours, vlogs, and tech explainers.</p>
+      <p><a href="https://www.youtube.com/@Mallam_Mowa" target="_blank">🎥 Visit My Channel</a></p>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="card">
+      <p>High Speed & Power Efficient Hybrid Adder/Subtractor Design using Reversible Logic.</p>
+      <p><a href="https://www.irjet.net/archives/V9/i1/IRJET-V9I109.pdf" target="_blank">📄 View PDF</a></p>
+    </div>
+  </section>
+
+  <section id="activities">
     <h2>Activities</h2>
-    <ul>
-      <li>Vice President, Student Cultural Organization, University of Memphis (Aug–Dec 2024).</li>
-      <li>Weeks of Welcome Leader, University of Memphis (Aug–Sep 2023).</li>
-      <li>Committee Member, SAC Film/Speaker Series (Aug–Dec 2023).</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li><strong>Vice President – Cultural Student Organization:</strong> Led 5+ events, boosting student participation by 40%.</li>
+        <li><strong>Weeks of Welcome (WOW) Leader:</strong> Guided new students; awarded 2023 WOW Leader Badge.</li>
+        <li><strong>Committee Member – SAC Film/Speaker Series:</strong> Coordinated logistics for campus events, improving attendance.</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Awards & Publications -->
-  <section id="awards" class="section">
-    <h2>Awards & Publications</h2>
-    <ul>
-      <li>Certificate of Excellence for Academic Performance (2021–2022).</li>
-      <li>WOW Leader Badge, University of Memphis (2023).</li>
-      <li>Publication: <a href="https://www.irjet.net/archives/V9/i1/IRJET-V9I109.pdf" target="_blank">HAS: High Speed & Power Efficient Hybrid Adder/Subtractor Design Using Reversible Logic (IRJET, Jan 2022)</a></li>
-    </ul>
+  <section id="tours">
+    <h2>Industrial Tours & Technical Visits</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Bass Pro Pyramid (Memphis):</strong> Explored HVAC systems and safety protocols.</li>
+        <li><strong>University of Memphis Heating & Cooling Plant:</strong> Learned about energy management and flow systems.</li>
+        <li><strong>BSNL Technical Visit:</strong> Observed telecom infrastructure and signal operations.</li>
+        <li><strong>INCOIS Technical Tour:</strong> Studied ocean data monitoring and disaster alert systems.</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- YouTube -->
-  <section id="youtube" class="section">
-    <h2>YouTube</h2>
-    <p>
-      I run a YouTube channel where I share videos about life at the University of Memphis, 
-      create vlogs around Memphis, and provide helpful content for incoming students.
-    </p>
-    <a href="https://www.youtube.com/@Mallam_Mowa" target="_blank" class="btn">Visit My Channel</a>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:jagathchandramallam@gmail.com">jagathchandramallam@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/jagath-chandra-mallam-9087a2187/" target="_blank">linkedin.com/in/jagath-chandra-mallam</a></p>
+    </div>
   </section>
 
+  <footer>
+    <p>&copy; 2025 Jagath Chandra Mallam</p>
+  </footer>
 </body>
 </html>

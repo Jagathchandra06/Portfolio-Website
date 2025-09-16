@@ -7,24 +7,106 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #2c3e50, #4ca1af); color: #f0f0f0; scroll-behavior: smooth; }
-    nav { background-color: rgba(0, 0, 0, 0.85); padding: 15px 20px; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; flex-wrap: wrap; }
-    nav a { color: #ffffff; margin: 10px 20px; text-decoration: none; font-weight: 600; transition: color 0.3s; }
-    nav a:hover { color: #1de9b6; }
-    header { text-align: center; padding: 80px 20px 40px; background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; }
-    header img { width: 200px; height: 200px; object-fit: cover; border-radius: 50%; margin-bottom: 20px; border: 4px solid white; }
-    section { padding: 60px 20px; max-width: 1100px; margin: auto; animation: fadeIn 1s ease-in-out; }
-    h2 { color: #1de9b6; text-align: center; margin-bottom: 40px; }
-    ul li { margin-bottom: 12px; }
-    footer { text-align: center; padding: 20px; background-color: rgba(0, 0, 0, 0.85); }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d1b2a;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #ffffff;
+      margin: 10px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00e5ff;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #1b263b, #0d1b2a);
+      color: white;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    header img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #00e5ff;
+      box-shadow: 0px 4px 20px rgba(0, 229, 255, 0.6);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #00e5ff;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      margin-bottom: 25px;
+      border-radius: 14px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 20px rgba(0,229,255,0.5);
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: #ffffff;
+    }
+    .card h4 {
+      margin: 6px 0 12px;
+      font-size: 1rem;
+      color: #00e5ff;
+      font-weight: 500;
+    }
+    .card p, .card li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #dcdcdc;
+    }
+    ul { padding-left: 20px; }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      margin-top: 40px;
+    }
+    footer p { color: #bbb; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
-    <a href="#hardware">Hardware</a>
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
@@ -39,111 +121,135 @@
     <img src="./profile.jpg" alt="Jagath Chandra Mallam">
     <h1>Jagath Chandra Mallam</h1>
     <p>Master of Science in Electrical and Computer Engineering at the University of Memphis | Open to Full-Time Roles (OPT)</p>
-    <p>I am an Electrical and Hardware Engineering professional with strong expertise in PCB assembly, circuit design, troubleshooting, and power systems. Alongside my hardware background, I bring hands-on experience in embedded systems, AI/ML applications, and smart grid technologies. I enjoy bridging hardware and software to deliver efficient, reliable, and scalable solutions. I am actively seeking full-time opportunities in electrical engineering, hardware design, embedded systems, and automation under my OPT plan.</p>
+    <p>Specialized in Electrical Systems, Embedded Engineering, and AI applications. Experienced in PCB assembly, circuit troubleshooting, and automation projects, with additional expertise in software development and machine learning. Actively seeking opportunities to contribute innovative and scalable solutions in the electrical or IT field.</p>
   </header>
 
   <section id="experience">
     <h2>Work Experience</h2>
-    <ul>
-      <li><strong>Student Assistant – Lock Shop, University of Memphis:</strong> Assisted locksmiths with core pinning, key cutting, and mechanical repairs for campus facilities. Maintained accurate records of key assignments, improved inventory workflows, and supported troubleshooting of minor electrical and mechanical issues. (Jun 2023 – Dec 2024)</li>
-    </ul>
-  </section>
- 
-  <section id="hardware">
-    <h2>Hardware Engineering</h2>
-    <ul>
-      <li>Experience in PCB assembly, soldering, and troubleshooting circuits using multimeters, oscilloscopes, and other test equipment.</li>
-      <li>Hands-on work with VLSI design projects, including Low Power SRAM and High-Speed Hybrid Adder/Subtractor circuits.</li>
-      <li>Proficient in reading and interpreting schematics, wiring diagrams, and technical manuals for hardware development.</li>
-      <li>Worked with microcontrollers (8051, Arduino) for embedded system prototypes and automation projects.</li>
-      <li>Familiar with electrical transmission concepts, substation operations, and high-voltage testing through academic and industrial visits.</li>
-    </ul>
-  </section>
-
-  <section id="internship">
-    <h2>Internship Experience</h2>
-    <ul>
-      <li><strong>Embedded Systems and Firmware Intern – SP Technologies (2019):</strong> Completed an internship focused on embedded systems and firmware development. Gained both theoretical and hands-on practical experience working with microcontrollers, circuit schematics, and embedded C programming. Successfully developed a small-scale project integrating sensors and control logic, applying learned concepts to real-world scenarios. Received certification upon completion.</li>
-    </ul>
+    <div class="card">
+      <h3>Hardware Engineer Intern</h3>
+      <h4>SP Technologies | Nov 2018 – May 2019</h4>
+      <p>Worked on embedded systems and firmware development. Developed prototypes using 8051 microcontrollers, circuit schematics, and embedded C programming. Successfully built sensor-integrated automation systems and received certification for project excellence.</p>
+    </div>
+    <div class="card">
+      <h3>Student Assistant – Lock Shop</h3>
+      <h4>University of Memphis | Jun 2023 – Dec 2024</h4>
+      <p>Assisted locksmiths with core pinning, key cutting, and mechanical/electrical troubleshooting for campus facilities. Managed inventory workflows, maintained accurate key assignment records, and improved documentation processes for efficiency.</p>
+    </div>
+    <div class="card">
+      <h3>Embedded Systems Intern</h3>
+      <h4>Academic Projects & Training | 2016 – 2022</h4>
+      <p>Hands-on experience in PCB assembly, VLSI projects (Low Power SRAM, Hybrid Adder/Subtractor), and embedded automation (RF-based robot, automatic light control). Developed practical skills in soldering, debugging, and high-voltage testing concepts through industrial tours and project work.</p>
+    </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <ul>
-      <li><strong>The University of Memphis:</strong> M.S. in Electrical and Computer Engineering, 2023–2024, GPA: 3.41/4.0</li>
-      <li><strong>Malla Reddy Engineering College and Management Sciences:</strong> B.Tech in Electronics and Communication Engineering, 2019–2022</li>
-      <li><strong>Government Polytechnic Sangareddy:</strong> Diploma in Electronics and Communication Engineering, 2016–2019, 85%</li>
-    </ul>
+    <div class="card">
+      <h3>The University of Memphis</h3>
+      <h4>M.S. in Electrical and Computer Engineering | 2023–2024 | GPA: 3.41/4.0</h4>
+    </div>
+    <div class="card">
+      <h3>Malla Reddy Engineering College & Management Sciences</h3>
+      <h4>B.Tech in Electronics and Communication Engineering | 2019–2022</h4>
+    </div>
+    <div class="card">
+      <h3>Government Polytechnic Sangareddy</h3>
+      <h4>Diploma in Electronics and Communication Engineering | 2016–2019 | 85%</h4>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><strong>Leaf Image Classification | Multimedia Info Process:</strong> Developed ML models including Logistic Regression and Random Forest for plant leaf classification, achieving 73% accuracy using Python and the PlantVillage Dataset. (Apr 2023)</li>
-      <li><strong>Low Power SRAM Design Using 120nm Technology | VLSI Design:</strong> Designed a 6T SRAM cell optimized with MTCMOS for power efficiency using Microwind and DSCH2. (Jul 2022)</li>
-      <li><strong>High Speed Hybrid Adder/Subtractor Using Reversible Logic | VLSI Design:</strong> Simulated hybrid adder/subtractor circuits optimizing for speed, area, and power efficiency. (Jan 2022)</li>
-      <li><strong>Automatic Light Intensity Control | Embedded Systems:</strong> Engineered a light automation system for streetlights using sensors and embedded C programming. (Sep 2019)</li>
-      <li><strong>RF-Based Remote Controlled Metal Fire Gas Detection Robot | Embedded Systems:</strong> Developed a microcontroller-based robot for hazardous environment detection. (Nov 2018)</li>
-    </ul>
+    <div class="card">
+      <h3>Leaf Image Classification</h3>
+      <p>Developed ML models including Logistic Regression and Random Forest for plant leaf classification, achieving 73% accuracy using Python and the PlantVillage Dataset. (Apr 2023)</p>
+    </div>
+    <div class="card">
+      <h3>Low Power SRAM Design Using 120nm Technology</h3>
+      <p>Designed a 6T SRAM cell optimized with MTCMOS for power efficiency using Microwind and DSCH2. (Jul 2022)</p>
+    </div>
+    <div class="card">
+      <h3>High Speed Hybrid Adder/Subtractor Using Reversible Logic</h3>
+      <p>Simulated hybrid adder/subtractor circuits optimizing for speed, area, and power efficiency. (Jan 2022)</p>
+    </div>
+    <div class="card">
+      <h3>Automatic Light Intensity Control</h3>
+      <p>Engineered a light automation system for streetlights using sensors and embedded C programming. (Sep 2019)</p>
+    </div>
+    <div class="card">
+      <h3>RF-Based Remote Controlled Metal Fire Gas Detection Robot</h3>
+      <p>Developed a microcontroller-based robot for hazardous environment detection. (Nov 2018)</p>
+    </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
-      <li><strong>Programming Languages:</strong> Python, Core Java, C, SQL</li>
-      <li><strong>AI/ML Tools:</strong> TensorFlow, PyTorch, scikit-learn, OpenCV</li>
-      <li><strong>Design & Simulation Tools:</strong> MATLAB, AutoCAD, Microwind, ExpressPCB, DSCH2</li>
-      <li><strong>Data Analysis:</strong> NumPy, Pandas, Matplotlib, Seaborn</li>
-      <li><strong>Technical Skills:</strong> Embedded Systems, PLC, PCB Layout, Signal Processing, Microcontroller Programming</li>
-      <li><strong>Software Proficiency:</strong> Microsoft Office Suite (Word, Excel, PowerPoint, Outlook), GitHub</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li><strong>Programming:</strong> Python, Java, C, SQL</li>
+        <li><strong>AI/ML Tools:</strong> TensorFlow, PyTorch, scikit-learn, OpenCV</li>
+        <li><strong>Design & Simulation:</strong> MATLAB, AutoCAD, Microwind, ExpressPCB, DSCH2</li>
+        <li><strong>Data Analysis:</strong> NumPy, Pandas, Matplotlib</li>
+        <li><strong>Technical:</strong> Embedded Systems, PCB Layout, Signal Processing, Microcontrollers</li>
+        <li><strong>Software:</strong> Microsoft Office Suite, GitHub</li>
+      </ul>
+    </div>
   </section>
 
   <section id="certifications">
     <h2>Certifications</h2>
-    <ul>
-      <li>AutoCAD Essential Training – LinkedIn Learning (Jan 2025)</li>
-      <li>Data Engineering Foundations – LinkedIn Learning (Jan 2025)</li>
-      <li>Excel for Engineering Professionals – LinkedIn Learning (Dec 2024)</li>
-      <li>Embedded Systems and Firmware Internship Certificate – SP Technologies (2019)</li>
-      <li>Certificate of Excellence – Academic Topper (2021-2022), Malla Reddy Engineering College and Management Sciences</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li>AutoCAD Essential Training – LinkedIn Learning (Jan 2025)</li>
+        <li>Data Engineering Foundations – LinkedIn Learning (Jan 2025)</li>
+        <li>Excel for Engineering Professionals – LinkedIn Learning (Dec 2024)</li>
+        <li>Embedded Systems & Firmware Internship Certificate – SP Technologies (2019)</li>
+      </ul>
+    </div>
   </section>
 
   <section id="youtube">
     <h2>YouTube / Content Creation</h2>
-    <p>I share videos about university life, travel, and engineering knowledge for aspiring international students, including dorm tours, vlogs, and tech explainers.</p>
-    <p><a href="https://www.youtube.com/@Mallam_Mowa" target="_blank">Visit My Channel</a></p>
+    <div class="card">
+      <p>I share videos about university life, travel, and engineering knowledge for aspiring international students, including dorm tours, vlogs, and tech explainers.</p>
+      <p><a href="https://www.youtube.com/@Mallam_Mowa" target="_blank">🎥 Visit My Channel</a></p>
+    </div>
   </section>
 
   <section id="activities">
     <h2>Activities</h2>
-    <ul>
-      <li><strong>Vice President – Cultural Student Organization, University of Memphis:</strong> Led organizational change by managing and executing 5+ cultural events, increasing student participation by 40% through inclusive event planning and strategic outreach.</li>
-      <li><strong>Weeks of Welcome (WOW) Leader, University of Memphis:</strong> Guided 15–25 new students through orientation activities, ensuring a smooth transition to campus life. Awarded the 2023 WOW Leader Badge for exceptional leadership.</li>
-      <li><strong>Committee Member – SAC Film/Speaker Series, University of Memphis:</strong> Coordinated logistics for campus events, improving attendance rates through promotion and detailed event planning.</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li><strong>Vice President – Cultural Student Organization:</strong> Led 5+ events, boosting student participation by 40%.</li>
+        <li><strong>Weeks of Welcome (WOW) Leader:</strong> Guided new students; awarded 2023 WOW Leader Badge.</li>
+        <li><strong>Committee Member – SAC Film/Speaker Series:</strong> Coordinated logistics for campus events, improving attendance.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="tours">
     <h2>Industrial Tours & Technical Visits</h2>
-    <ul>
-      <li><strong>Bass Pro Pyramid, Memphis (ASHRAE Technical Tour):</strong> Explored HVAC systems, process flow sheets, and safety procedures used in large-scale commercial facilities.</li>
-      <li><strong>University of Memphis Heating & Cooling Plant:</strong> Gained hands-on understanding of equipment operations, energy management, and flow systems.</li>
-      <li><strong>BSNL Technical Visit:</strong> Observed telecommunication infrastructure and signal processing operations.</li>
-      <li><strong>INCOIS Technical Tour:</strong> Learned about ocean data monitoring systems, disaster alert networks, and sensor technologies.</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li><strong>Bass Pro Pyramid (Memphis):</strong> Explored HVAC systems and safety protocols.</li>
+        <li><strong>University of Memphis Heating & Cooling Plant:</strong> Learned about energy management and flow systems.</li>
+        <li><strong>BSNL Technical Visit:</strong> Observed telecom infrastructure and signal operations.</li>
+        <li><strong>INCOIS Technical Tour:</strong> Studied ocean data monitoring and disaster alert systems.</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:jagathchandramallam@gmail.com">jagathchandramallam@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jagath-chandra-mallam-9087a2187/" target="_blank">linkedin.com/in/jagath-chandra-mallam</a></p>
+    <div class="card">
+      <p>Email: <a href="mailto:jagathchandramallam@gmail.com">jagathchandramallam@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/jagath-chandra-mallam-9087a2187/" target="_blank">linkedin.com/in/jagath-chandra-mallam</a></p>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Jagath Chandra Mallam</p>
   </footer>
-
 </body>
 </html>
